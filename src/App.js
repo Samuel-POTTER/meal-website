@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home } from "./Home";
+import { QueryClient, QueryClientProvider } from 'react-query'
+import CategoriesContextProvider from './context/CategoriesContext';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const queryClient = new QueryClient()
+    return (
+        <QueryClientProvider client={queryClient}>
+            <CategoriesContextProvider>
+                <BrowserRouter>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                    </Routes>
+                </BrowserRouter>
+            </CategoriesContextProvider>
+        </QueryClientProvider>
+    )
 }
 
 export default App;
