@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import { CategoriesButton } from './CategoriesButton';
 import { CategoriesContext } from './context/CategoriesContext';
 import { MealCard } from './MealCard';
+import { ModalReceipe } from './ModalReceipe';
 import { Pagination } from './Pagination';
 import { filterByCategory } from './request/MealRequest';
 import { Searchbar } from './Searchbar';
@@ -43,6 +44,7 @@ export const Home = () => {
                     }
                 </div>
             </div>
+            <ModalReceipe />
             {!isLoading ?
                 <Pagination perPage={postPerPage} total={data.meals.length} incrementPage={(pageNumber) => setCurrentPage(pageNumber)} />
             : null
