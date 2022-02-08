@@ -18,4 +18,4 @@ This project is a simple project intended to show some basics frontend skills
 -   Tailwindcss (css framework)
 -   React Query (library allowing efficient utility for fetching/managing data)
 
-![alt text](https://github.com/Samuel-POTTER/Safthon/blob/master/meal.PNG)
+![alt text](https://github.com/Samuel-POTTER/meal-website/blob/master/meal.PNG)
