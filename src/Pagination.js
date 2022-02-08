@@ -8,6 +8,8 @@ export const Pagination = ({perPage, total, incrementPage}) => {
     } 
     return(
         <nav className='mt-8'>
+            {
+                pageNumber.length > 1 ?
             <ul className='flex space-x-4 justify-center'>
                 {pageNumber.map((i) => {
                     return(
@@ -16,7 +18,8 @@ export const Pagination = ({perPage, total, incrementPage}) => {
                         </li>
                     )
                 })}
-            </ul>
+            </ul> : null
+            }
         </nav>
     )
 }
