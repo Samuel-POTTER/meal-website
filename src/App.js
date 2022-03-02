@@ -12,7 +12,7 @@ function App() {
             <CategoriesContextProvider>
                 <MealContextProvider>
                     <ModalContextProvider>
-                    <BrowserRouter>
+                        <BrowserRouter>
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
                             </Routes>
